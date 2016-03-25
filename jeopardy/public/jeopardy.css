@@ -1,0 +1,61 @@
+/*
+ * jeopardy.css
+ *
+ * Computer Science 50, Fall 2011
+ * section10
+ *
+ * Global stylesheet.
+ */
+
+html
+{
+    height: 100%;
+}
+
+body
+{
+    font-family: sans-serif;
+    height: 100%;
+    margin: 0;
+    text-align: center;
+    background-color: blue;
+    color: yellow;
+}
+
+div#logo
+{
+    font-size: large;
+    font-weight: bold;
+    margin-bottom: 25px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+div#question
+{
+    font-size: x-large;
+    font-weight: normal;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+div#answer
+{
+    font-size: large;
+    font-weight: normal;
+    margin-bottom: 50px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+table
+{
+    margin-bottom: 50px;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    table-layout: fixed;
+    text-align: center;
+    font-size: large;
+}

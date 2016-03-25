@@ -1,0 +1,44 @@
+Exercise
+
+1. What will print?
+
+// Address of x is 0x1b in memory
+// sizeof(int) = 4
+
+int x = 4;
+int* y = &x;
+
+x += 5;
+y += 3;
+
+x will print as ? 9
+y will print as ? 0x28
+
+2. Good or bad code snippet? Why?
+
+char* buffer = malloc(sizeof(char) * 1024);
+
+if (buffer == NULL)
+{
+    exit(1);    
+}
+
+char* input = GetString();
+
+memcpy(buffer, input, sizeof(input) + 1);
+
+free(input);
+return EXIT_SUCCESS;
+
+// Danger 1: buffer overflow. Run with valgrind ./4_code < /usr/bin/dict
+// input does not have the same address as buffer so we need to free both
+
+3. What's a disadvantage of merge sort?
+
+4. The contents of my_file.txt are "hello, world!\EOF". What happens when I run
+
+    $ echo "from CS50" >> my_file.txt
+
+at the command line?
+
+5. (Extra Credit) Write out the first 24 bits (leftmost) bits of ~(-1).
