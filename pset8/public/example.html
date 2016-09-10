@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- JQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        
+        <!-- app's own JavaScript -->
+        <script src="/js/scripts.js"></script>
+        
+        <script>
+        
+            // http://www.w3schools.com/jquery/jquery_examples.asp
+            $(document).ready(function(){
+                
+                // FUNCTION 1 (note comment syntax)
+                $("button").click(function(){
+                    $("#test").hide();
+                });
+                
+                // FUNCTION 2 (note the # for selecting id)
+                $("#btn2").hover(
+                    function() {$("h2").fadeOut("slow");},
+                    function() {$("h2").fadeIn()}
+                );
+                
+                // FUNCTION 3
+                $("#btn3").click(function() {
+                    
+                    $.getJSON("articles.php", {geo: "06511"})
+                    
+                    .done(function(data, textStatus, jqXHR) {
+                        console.log(data[0]["title"]);
+                    })
+                
+                    .fail(function(jqXHR, textStatus, errorThrown) {
+
+                        // log error to browser's console
+                        console.log(errorThrown.toString());
+                    });
+                });
+            });
+        </script>
+        <title>A JQuery Experiment</title>
+    </head>
+    <body>
+
+        <!-- Note the html escape syntax -->
+        <button>Make "test" disappear</button>
+        
+        <button id="btn2">Make header disappear</button>
+
+        <button id="btn3">Get some JSON</button>
+
+        <h2>This is a heading</h2>
+
+        <p>This is a paragraph.</p>
+
+        <p id="test">This is a test.</p>
+
+
+
+    </body>
+</html>

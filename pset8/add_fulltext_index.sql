@@ -1,0 +1,1 @@
+-- show how to do this like in pset8.sql
